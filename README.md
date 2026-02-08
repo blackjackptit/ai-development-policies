@@ -17,6 +17,9 @@ A collection of practical policies, rules, and best practices for developing AI 
 ### Observability
 - **[Observability Guide](OBSERVABILITY.md)** - Complete monitoring, logging, metrics, and alerting strategies for AI applications
 
+### Security
+- **[Security Guide](SECURITY.md)** - Comprehensive security practices including input validation, prompt injection prevention, PII protection, and incident response
+
 ## Quick Start
 
 ### Key Principles
