@@ -23,6 +23,9 @@ A collection of practical policies, rules, and best practices for developing AI 
 ### Compliance
 - **[Compliance Guide](COMPLIANCE.md)** - Regulatory compliance including GDPR, CCPA, HIPAA, consent management, and data protection requirements
 
+### Integration
+- **[Integration Guide](INTEGRATION.md)** - Practical patterns for integrating AI into applications: APIs, SDKs, webhooks, caching, batch processing, and client libraries
+
 ## Quick Start
 
 ### Key Principles
