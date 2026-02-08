@@ -14,6 +14,9 @@ A collection of practical policies, rules, and best practices for developing AI 
 ### Cost Management
 - **[Cost Reduction Rules](COST_REDUCTION_RULES.md)** - Comprehensive guidelines for minimizing AI development costs while maintaining quality
 
+### Observability
+- **[Observability Guide](OBSERVABILITY.md)** - Complete monitoring, logging, metrics, and alerting strategies for AI applications
+
 ## Quick Start
 
 ### Key Principles
@@ -24,16 +27,23 @@ A collection of practical policies, rules, and best practices for developing AI 
 4. **Monitor continuously** - Track token usage and costs per endpoint
 5. **Test cheaply** - Mock responses in tests, use cheap models for development
 
-### Cost Optimization Checklist
+### Implementation Checklist
 
+**Cost Optimization:**
 - [ ] Review [Cost Reduction Rules](COST_REDUCTION_RULES.md)
 - [ ] Implement response caching
-- [ ] Set up token usage logging
-- [ ] Configure budget alerts
-- [ ] Add rate limiting
-- [ ] Use deterministic logic where possible
-- [ ] Limit conversation history
+- [ ] Use deterministic logic where possible (regex, libraries, rules)
 - [ ] Set max_tokens on all API calls
+- [ ] Add rate limiting per user/tier
+- [ ] Limit conversation history
+
+**Observability:**
+- [ ] Set up structured logging (JSON format)
+- [ ] Track token usage and costs per request
+- [ ] Configure budget alerts (80%, 95%, 100%)
+- [ ] Create cost/performance dashboards
+- [ ] Monitor cache hit rates
+- [ ] Set up error rate alerts
 
 ## Contributing
 
