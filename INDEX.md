@@ -4,7 +4,7 @@
 
 This index provides quick navigation to all policies, guidelines, and best practices for cost-efficient, secure, and compliant AI application development.
 
-**Total Documentation:** 14,952 lines across 12 comprehensive documents
+**Total Documentation:** 16,021 lines across 13 comprehensive documents
 
 ---
 
@@ -18,6 +18,7 @@ This index provides quick navigation to all policies, guidelines, and best pract
 | [AI Development](AI_DEVELOPMENT.md) | 1,762 | 68KB | Development workflow, Git, deployment, team collaboration |
 | [AI Testing Architecture](AI_TESTING_ARCHITECTURE.md) | 2,153 | 84KB | Testing infrastructure, mocks, CI/CD, A/B testing |
 | [Observability Architecture](OBSERVABILITY_ARCHITECTURE.md) | 2,354 | 92KB | Monitoring infrastructure, logging, metrics, tracing, cost tracking |
+| [Metrics Guide](METRICS.md) | 1,069 | 42KB | Complete metrics catalog: cost, performance, quality, usage, security |
 | [Cost Reduction](COST_REDUCTION_RULES.md) | 516 | 13KB | Token optimization, caching, model selection |
 | [Observability](OBSERVABILITY.md) | 1,014 | 33KB | Monitoring, logging, metrics, alerting |
 | [Security](SECURITY.md) | 1,218 | 35KB | Input validation, PII protection, incident response |
@@ -236,6 +237,16 @@ This index provides quick navigation to all policies, guidelines, and best pract
 - [Alerting System](OBSERVABILITY_ARCHITECTURE.md#6-alerting-system-architecture)
 - [Dashboard Design](OBSERVABILITY_ARCHITECTURE.md#7-dashboard-and-visualization-architecture)
 
+### Metrics Catalog
+- [Cost Metrics](METRICS.md#1-cost-metrics)
+- [Performance Metrics](METRICS.md#2-performance-metrics)
+- [Quality Metrics](METRICS.md#3-quality-metrics)
+- [Usage Metrics](METRICS.md#4-usage-metrics)
+- [Cache Metrics](METRICS.md#5-cache-metrics)
+- [Infrastructure Metrics](METRICS.md#6-infrastructure-metrics)
+- [Business Metrics](METRICS.md#7-business-metrics)
+- [Security Metrics](METRICS.md#8-security-metrics)
+
 ### Integration
 - [API Design](INTEGRATION.md#3-api-design-best-practices)
 - [SDK Integration](INTEGRATION.md#2-sdk-integration-patterns)
@@ -405,6 +416,18 @@ Full details: [Compliance - Section 1](COMPLIANCE.md#1-regulatory-frameworks)
 | Metrics | 730 days | Business |
 | Audit logs | 7 years | Legal (HIPAA) |
 
+### Key Metrics Thresholds
+| Metric | Target | Warning | Critical |
+|--------|--------|---------|----------|
+| Cost per request | < $0.01 | > $0.05 | > $0.10 |
+| Error rate | < 1% | > 5% | > 10% |
+| p95 latency | < 2s | > 5s | > 10s |
+| Cache hit rate | > 60% | < 40% | < 20% |
+| Availability | > 99.9% | < 99% | < 95% |
+| Daily cost | Budget | > 80% | > 95% |
+
+Full metrics catalog: [Metrics Guide](METRICS.md)
+
 ---
 
 ## 🚀 Implementation Roadmap
@@ -519,7 +542,7 @@ For questions, issues, or contributions:
 
 ---
 
-**Version:** 1.3
+**Version:** 1.4
 **Last Updated:** February 6, 2026
-**Total Lines:** 14,952 across 12 documents
+**Total Lines:** 16,021 across 13 documents
 **Status:** Active
