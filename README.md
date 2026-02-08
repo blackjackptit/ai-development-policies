@@ -11,7 +11,9 @@ A complete collection of practical policies, rules, and best practices for devel
 ## Documents
 
 ### Architecture
-- **[Architecture Guide](ARCHITECTURE.md)** - Layered architecture patterns for cost-efficient AI applications with detailed examples of deterministic logic vs LLM usage
+- **[Architecture Guide](ARCHITECTURE.md)** - Complete architecture overview and navigation
+  - [Cost-Efficient Architecture](COST_EFFICIENT_ARCHITECTURE.md) - Layered decision architecture, deterministic logic, cost optimization patterns
+  - [System Architecture](SYSTEM_ARCHITECTURE.md) - System integration, microservices, AI Gateway, scalability, and HA patterns
 
 ### Cost Management
 - **[Cost Reduction Rules](COST_REDUCTION_RULES.md)** - Comprehensive guidelines for minimizing AI development costs while maintaining quality
@@ -26,8 +28,7 @@ A complete collection of practical policies, rules, and best practices for devel
 - **[Compliance Guide](COMPLIANCE.md)** - Regulatory compliance including GDPR, CCPA, HIPAA, consent management, and data protection requirements
 
 ### Integration
-- **[Integration Guide](INTEGRATION.md)** - Practical patterns for integrating AI into applications: APIs, SDKs, webhooks, caching, batch processing, and client libraries
-- **[Integration Architecture](INTEGRATION_ARCHITECTURE.md)** - System architecture for AI integration: layered architecture, microservices, data flow, scalability, and AI Gateway patterns
+- **[Integration Guide](INTEGRATION.md)** - Practical integration patterns and code examples: APIs, SDKs, webhooks, caching, batch processing, and client libraries
 
 ### Testing
 - **[Testing Guide](TESTING.md)** - Comprehensive testing strategies for AI applications: unit tests, integration tests, prompt testing, model evaluation, and CI/CD
