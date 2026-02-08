@@ -150,15 +150,201 @@ MAX_CALLS_PER_DAY = 1000
 
 ## 7. Architecture Patterns
 
-### Rule 7.1: Use Deterministic Logic First
-- Don't use LLMs for tasks that can be solved with code
-- Examples to avoid:
-  - ❌ LLM for date formatting
-  - ❌ LLM for simple math calculations
-  - ❌ LLM for regex matching
-  - ✅ LLM for natural language understanding
-  - ✅ LLM for creative generation
-  - ✅ LLM for complex reasoning
+### Rule 7.1: Use Deterministic Logic First ⭐ CRITICAL
+
+**Golden Rule: LLMs are expensive last-resort tools, not first-choice solutions.**
+
+Before using an LLM, ask yourself: "Can I solve this with code, libraries, or rules?"
+
+#### When to Use Deterministic Logic (FREE)
+
+**✅ ALWAYS use code/libraries for these tasks:**
+
+1. **Data Extraction with Known Patterns**
+   ```python
+   # ❌ EXPENSIVE ($0.001 per call)
+   email = llm.call("Extract email from: " + text)
+
+   # ✅ FREE (0ms, 100% accurate)
+   import re
+   email = re.findall(r'[\w\.-]+@[\w\.-]+\.\w+', text)[0]
+   ```
+
+2. **Data Validation**
+   ```python
+   # ❌ EXPENSIVE
+   is_valid = llm.call(f"Is {phone} a valid phone number?")
+
+   # ✅ FREE
+   import phonenumbers
+   is_valid = phonenumbers.is_valid_number(phonenumbers.parse(phone))
+   ```
+
+3. **Format Conversion**
+   ```python
+   # ❌ EXPENSIVE
+   iso_date = llm.call(f"Convert {date} to ISO format")
+
+   # ✅ FREE
+   from dateutil import parser
+   iso_date = parser.parse(date).isoformat()
+   ```
+
+4. **Simple Calculations**
+   ```python
+   # ❌ EXPENSIVE
+   result = llm.call(f"Calculate {a} + {b} * {c}")
+
+   # ✅ FREE
+   result = a + (b * c)
+   ```
+
+5. **Language Detection**
+   ```python
+   # ❌ EXPENSIVE
+   lang = llm.call(f"What language is: {text}")
+
+   # ✅ FREE (95%+ accuracy)
+   from langdetect import detect
+   lang = detect(text)
+   ```
+
+6. **Keyword/Pattern Matching**
+   ```python
+   # ❌ EXPENSIVE
+   category = llm.call(f"Categorize: {text}")
+
+   # ✅ FREE (for 80% of clear cases)
+   if any(word in text.lower() for word in ['urgent', 'asap', 'emergency']):
+       category = 'high_priority'
+   ```
+
+7. **URL/Email Validation**
+   ```python
+   # ❌ EXPENSIVE
+   is_valid = llm.call(f"Is {url} valid?")
+
+   # ✅ FREE
+   from urllib.parse import urlparse
+   is_valid = bool(urlparse(url).scheme and urlparse(url).netloc)
+   ```
+
+8. **Text Normalization**
+   ```python
+   # ❌ EXPENSIVE
+   cleaned = llm.call(f"Clean and normalize: {text}")
+
+   # ✅ FREE
+   cleaned = ' '.join(text.lower().strip().split())
+   ```
+
+#### When LLMs Are Necessary (EXPENSIVE)
+
+**✅ Use LLMs only for these:**
+
+1. **Natural Language Understanding**
+   - Intent classification with nuance
+   - Sentiment with sarcasm/context
+   - Semantic similarity
+
+2. **Content Generation**
+   - Creative writing
+   - Personalized responses
+   - Summarization
+
+3. **Complex Reasoning**
+   - Multi-step problem solving
+   - Causal analysis
+   - Strategic planning
+
+4. **Ambiguous Tasks**
+   - Unclear user intent
+   - Context-dependent decisions
+   - Subjective judgments
+
+#### Hybrid Approach (BEST)
+
+**Use rules for clear cases, LLM for edge cases:**
+
+```python
+def classify_sentiment(text: str):
+    # FREE: Handle 70-80% of clear cases with library
+    from textblob import TextBlob
+    polarity = TextBlob(text).sentiment.polarity
+
+    if polarity > 0.5:
+        return {"sentiment": "positive", "confidence": 0.95, "cost": 0}
+    elif polarity < -0.5:
+        return {"sentiment": "negative", "confidence": 0.95, "cost": 0}
+
+    # EXPENSIVE: Use LLM only for ambiguous 20-30%
+    return llm.classify_sentiment(text)  # Cost: $0.001
+```
+
+**Savings: 70-80% cost reduction**
+
+#### Decision Flowchart
+
+```
+User Request
+    ↓
+[Can regex/pattern match it?] ──YES→ Use Regex (FREE)
+    ↓ NO
+[Can a library handle it?] ──YES→ Use Library (FREE)
+    ↓ NO
+[Can rules handle 80%+ cases?] ──YES→ Use Rules + LLM fallback
+    ↓ NO
+[Is it simple classification?] ──YES→ Use Haiku ($)
+    ↓ NO
+[Requires reasoning?] ──YES→ Use Sonnet ($$)
+    ↓ NO
+[Highly complex?] ──YES→ Use Opus ($$$)
+```
+
+#### Common Mistakes to Avoid
+
+| Task | ❌ Wrong (Expensive) | ✅ Right (Free/Cheap) |
+|------|---------------------|---------------------|
+| Extract email | LLM | Regex |
+| Format date | LLM | dateutil library |
+| Validate phone | LLM | phonenumbers library |
+| Detect language | LLM | langdetect library |
+| Simple math | LLM | Python operators |
+| Uppercase text | LLM | .upper() method |
+| Count words | LLM | len(text.split()) |
+| URL validation | LLM | urlparse library |
+| Remove punctuation | LLM | String operations |
+| Check if number | LLM | str.isdigit() |
+
+#### Libraries to Know (Save 90%+ costs)
+
+```python
+# Text Processing
+import re                    # Pattern matching
+from textblob import TextBlob  # Basic NLP
+import nltk                  # Text processing
+
+# Data Validation
+import phonenumbers         # Phone validation
+from email_validator import validate_email
+from urllib.parse import urlparse
+
+# Date/Time
+from dateutil import parser  # Date parsing
+import datetime             # Date manipulation
+
+# Language
+from langdetect import detect  # Language detection
+
+# Data Extraction
+import json                 # JSON parsing
+import xml.etree.ElementTree  # XML parsing
+import csv                  # CSV processing
+```
+
+**Remember: Every time you reach for an LLM, first ask "Can a library do this?"**
+
+**See [ARCHITECTURE.md](ARCHITECTURE.md) for detailed examples and patterns.**
 
 ### Rule 7.2: Implement Fallback Strategies
 ```python

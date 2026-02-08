@@ -8,6 +8,9 @@ A collection of practical policies, rules, and best practices for developing AI 
 
 ## Documents
 
+### Architecture
+- **[Architecture Guide](ARCHITECTURE.md)** - Layered architecture patterns for cost-efficient AI applications with detailed examples of deterministic logic vs LLM usage
+
 ### Cost Management
 - **[Cost Reduction Rules](COST_REDUCTION_RULES.md)** - Comprehensive guidelines for minimizing AI development costs while maintaining quality
 
