@@ -20,6 +20,9 @@ A collection of practical policies, rules, and best practices for developing AI 
 ### Security
 - **[Security Guide](SECURITY.md)** - Comprehensive security practices including input validation, prompt injection prevention, PII protection, and incident response
 
+### Compliance
+- **[Compliance Guide](COMPLIANCE.md)** - Regulatory compliance including GDPR, CCPA, HIPAA, consent management, and data protection requirements
+
 ## Quick Start
 
 ### Key Principles
