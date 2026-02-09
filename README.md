@@ -2,13 +2,20 @@
 
 A complete collection of practical policies, rules, and best practices for developing AI applications efficiently, cost-effectively, securely, and compliantly.
 
-**📖 [Complete Index & Navigation →](INDEX.md)**
+**⚡ [Quick Reference Guide →](QUICK_REFERENCE.md)** | **📖 [Complete Index & Navigation →](INDEX.md)**
 
 ## Overview
 
-19,812 lines of comprehensive policies across 15 documents covering architecture, development workflow, testing infrastructure, observability architecture, security architecture, compliance architecture, metrics, cost optimization, monitoring, security, compliance, integration, and testing.
+19,812 lines of comprehensive policies across 16 documents covering architecture, development workflow, testing infrastructure, observability architecture, security architecture, compliance architecture, metrics, cost optimization, monitoring, security, compliance, integration, and testing.
+
+### Start Here
+
+**New to AI development?** Start with the **[Quick Reference Guide](QUICK_REFERENCE.md)** - a consolidated, actionable guide with the most critical information, code snippets, checklists, and emergency procedures from all documents.
 
 ## Documents
+
+### Quick Reference
+- **[Quick Reference Guide](QUICK_REFERENCE.md)** ⭐ **START HERE** - Consolidated guide with critical information, code snippets, configuration examples, metrics, emergency procedures, and quick decision matrices from all 15 comprehensive documents
 
 ### Architecture
 - **[Architecture Guide](ARCHITECTURE.md)** - Complete architecture overview and navigation

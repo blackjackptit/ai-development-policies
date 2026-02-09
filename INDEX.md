@@ -4,7 +4,9 @@
 
 This index provides quick navigation to all policies, guidelines, and best practices for cost-efficient, secure, and compliant AI application development.
 
-**Total Documentation:** 19,812 lines across 15 comprehensive documents
+**Total Documentation:** 19,812 lines across 16 documents
+
+**⚡ New to AI development? Start with the [Quick Reference Guide](QUICK_REFERENCE.md)**
 
 ---
 
@@ -12,6 +14,7 @@ This index provides quick navigation to all policies, guidelines, and best pract
 
 | Document | Lines | Size | Focus Area |
 |----------|-------|------|------------|
+| **[Quick Reference Guide](QUICK_REFERENCE.md)** ⭐ | **1,200+** | **47KB** | **Consolidated actionable guide with critical info, code, configs, metrics, emergencies** |
 | [Architecture Guide](ARCHITECTURE.md) | 192 | 8KB | Architecture navigation hub |
 | [Cost-Efficient Architecture](COST_EFFICIENT_ARCHITECTURE.md) | 722 | 28KB | Cost optimization, deterministic logic |
 | [System Architecture](SYSTEM_ARCHITECTURE.md) | 1,587 | 62KB | System design, microservices, AI Gateway |
@@ -27,6 +30,30 @@ This index provides quick navigation to all policies, guidelines, and best pract
 | [Compliance](COMPLIANCE.md) | 1,096 | 37KB | GDPR, CCPA, HIPAA, consent management |
 | [Integration](INTEGRATION.md) | 1,173 | 32KB | APIs, SDKs, webhooks, client libraries |
 | [Testing](TESTING.md) | 1,165 | 35KB | Unit, integration, prompt, performance testing |
+
+---
+
+## ⚡ Quick Reference Guide
+
+**[Quick Reference Guide](QUICK_REFERENCE.md)** is your go-to resource for daily development work. It consolidates the most critical information from all 15 comprehensive documents into a single, actionable reference.
+
+**What's Inside:**
+- **The Golden Rule** - Decision flow for when to use LLMs vs. code
+- **Cost-Aware Pipeline** - Layered architecture with cost/latency tradeoffs
+- **Critical Checklists** - Pre-launch (30 items), daily monitoring (10 items)
+- **Code Snippets** - Complete implementations: LLM client, input validator, rate limiter, observability wrapper, consent manager
+- **Configuration Examples** - GitHub Actions, Prometheus, environment templates
+- **Metrics & Thresholds** - Critical metrics dashboard with targets and alerts
+- **Quick Decisions** - When to use LLM vs. code, model selection guide, security threat response
+- **Emergency Procedures** - Cost spike, security breach, GDPR data subject rights
+- **Reference Tables** - Model pricing, security attack patterns, compliance requirements
+
+**Perfect for:**
+- Developers who need quick answers while coding
+- DevOps setting up monitoring and alerts
+- Security teams responding to incidents
+- Compliance teams handling data subject rights requests
+- Cost owners optimizing spending
 
 ---
 
@@ -597,7 +624,7 @@ For questions, issues, or contributions:
 
 ---
 
-**Version:** 1.6
+**Version:** 1.7
 **Last Updated:** February 6, 2026
-**Total Lines:** 19,812 across 15 documents
+**Total Lines:** 19,812 across 16 documents (15 comprehensive + 1 quick reference)
 **Status:** Active
